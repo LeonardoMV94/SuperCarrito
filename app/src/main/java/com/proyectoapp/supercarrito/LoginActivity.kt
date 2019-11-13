@@ -58,7 +58,7 @@ class LoginActivity : AppCompatActivity() {
                         action()
                     } else{
                         Toast.makeText(this,"Error en la autenticación", Toast.LENGTH_LONG).show()
-
+                        progressBar.visibility=View.INVISIBLE
                     }
                 }
         }

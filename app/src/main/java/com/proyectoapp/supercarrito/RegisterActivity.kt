@@ -61,26 +61,36 @@ class RegisterActivity : AppCompatActivity() {
            && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
             progressBar.visibility=View.VISIBLE
 
-           auth.createUserWithEmailAndPassword(email,password)
-               .addOnCompleteListener(this){
-                   task ->
+            try{
+                auth.createUserWithEmailAndPassword(email,password)
+                    .addOnCompleteListener(this){
+                            task ->
 
-                   if (task.isComplete){
-                       val user:FirebaseUser?=auth.currentUser
-                       verifyEmail(user)
+                        if (task.isComplete){
+                            val user:FirebaseUser?=auth.currentUser
+                            verifyEmail(user)
 
-                       val userBD=dbReference.child(user?.uid!!)
-                       userBD.child("Name").setValue(name)
-                       userBD.child("LastName").setValue(lastName)
+                            val userBD=dbReference.child(user?.uid!!)
+                            userBD.child("Name").setValue(name)
+                            userBD.child("LastName").setValue(lastName)
 
-                       action()
-                   }
-               }
+                            Toast.makeText(this,"Registrado exitosamente",Toast.LENGTH_LONG).show()
+
+                            action()
+                        }
+                    }
+            } catch (r: RuntimeException){
+                Toast.makeText(this,"Error: " + r.message ,Toast.LENGTH_LONG).show()
+            } catch (e: Exception){
+                Toast.makeText(this,"Error: " + e.message ,Toast.LENGTH_LONG).show()
+            }
+
        }
     }
 
     private fun action(){
             startActivity(Intent(this, LoginActivity::class.java))
+        Toast.makeText(this,"Ya puede iniciar sesión",Toast.LENGTH_LONG).show()
     }
 
     private fun verifyEmail(user:FirebaseUser?){
