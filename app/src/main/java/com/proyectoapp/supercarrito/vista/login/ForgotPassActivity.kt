@@ -1,4 +1,4 @@
-package com.proyectoapp.supercarrito
+package com.proyectoapp.supercarrito.vista.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,9 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+
+import com.proyectoapp.supercarrito.R
+import com.proyectoapp.supercarrito.isValidEmail
 
 
 class ForgotPassActivity : AppCompatActivity() {
@@ -31,19 +34,23 @@ class ForgotPassActivity : AppCompatActivity() {
 
     fun send(@Suppress("UNUSED_PARAMETER")view: View) {
         val email=txtEmail.text.toString()
-        if (!TextUtils.isEmpty(email)){
+
+        if (!TextUtils.isEmpty(email) && isValidEmail(email)){
             auth.sendPasswordResetEmail(email)
                 .addOnCompleteListener(this){
                     task ->
 
                     if (task.isSuccessful){
                         progressBar.visibility=View.VISIBLE
-                        startActivity(Intent(this,LoginActivity::class.java))
+                        startActivity(Intent(this,
+                            LoginActivity::class.java))
 
                     } else{
                         Toast.makeText(this,"Error al enviar el email", Toast.LENGTH_LONG).show()
                     }
                 }
+        } else{
+            Toast.makeText(this,"Email invalido", Toast.LENGTH_LONG).show()
         }
     }
 }

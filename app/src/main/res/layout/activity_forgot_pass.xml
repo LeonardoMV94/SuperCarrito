@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ForgotPassActivity"
+    tools:context=".vista.login.ForgotPassActivity"
     android:layout_marginTop="45dp">
 
     <ProgressBar
@@ -20,6 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+        android:drawablePadding="10dp"
         android:inputType="textPersonName"
         android:hint="Ingrese Email" />
 

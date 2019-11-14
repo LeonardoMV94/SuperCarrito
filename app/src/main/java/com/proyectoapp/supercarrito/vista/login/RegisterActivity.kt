@@ -1,4 +1,4 @@
-package com.proyectoapp.supercarrito
+package com.proyectoapp.supercarrito.vista.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.proyectoapp.supercarrito.R
 
 
 class RegisterActivity : AppCompatActivity() {

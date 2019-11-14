@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegisterActivity">
+    tools:context=".vista.login.RegisterActivity">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -20,6 +20,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Nombre"
+        android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+        android:drawablePadding="10dp"
         android:layout_margin="10dp"
         android:inputType="textPersonName"
          />
@@ -29,6 +31,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Apellido"
+        android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+        android:drawablePadding="10dp"
         android:layout_margin="10dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -39,6 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Correo"
+        android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+        android:drawablePadding="10dp"
         android:layout_margin="10dp"
         android:ems="10"
         android:inputType="textEmailAddress" />
@@ -48,6 +54,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
+        android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+        android:drawablePadding="10dp"
         android:layout_margin="10dp"
         android:ems="10"
         android:inputType="textPassword" />

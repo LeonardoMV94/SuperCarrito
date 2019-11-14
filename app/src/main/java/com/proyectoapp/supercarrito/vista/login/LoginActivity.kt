@@ -1,4 +1,4 @@
-package com.proyectoapp.supercarrito
+package com.proyectoapp.supercarrito.vista.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,8 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.proyectoapp.supercarrito.R
+import com.proyectoapp.supercarrito.vista.MainActivity
 
 
 class LoginActivity : AppCompatActivity() {
@@ -34,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun forgotPassword(@Suppress("UNUSED_PARAMETER")view: View){
-        startActivity(Intent(this,ForgotPassActivity::class.java))
+        startActivity(Intent(this, ForgotPassActivity::class.java))
     }
 
     fun register(@Suppress("UNUSED_PARAMETER")view: View){
