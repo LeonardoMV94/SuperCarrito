@@ -18,6 +18,7 @@ class SplashActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         //comentario de lucas
+        //comantario numero2 de lucas
 
         //El logo de la app es provisorio, se puede cambiar mas adelante
 
