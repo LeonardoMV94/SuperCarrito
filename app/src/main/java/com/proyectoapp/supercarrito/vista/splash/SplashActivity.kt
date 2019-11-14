@@ -17,6 +17,8 @@ class SplashActivity : AppCompatActivity() {
         //quitar Titulo de app de la parte superior  --Leonardo
         supportActionBar?.hide()
 
+        //comentario de lucas
+
         //El logo de la app es provisorio, se puede cambiar mas adelante
 
         //Abrir activity Login despues de 2 segundos
