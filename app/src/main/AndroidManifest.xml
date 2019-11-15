@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.proyectoapp.supercarrito.vista.splash.SplashActivity">
+        <activity android:name=".vista.ventas.VentaActivity"></activity>
+        <activity android:name=".vista.entrada.EntradaActivity" />
+        <activity android:name=".vista.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,9 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".vista.login.ForgotPassActivity" />
-        <activity android:name=".vista.login.LoginActivity">
-
-        </activity>
+        <activity android:name=".vista.login.LoginActivity" />
         <activity android:name=".vista.MainActivity" />
         <activity android:name=".vista.login.RegisterActivity" />
     </application>
