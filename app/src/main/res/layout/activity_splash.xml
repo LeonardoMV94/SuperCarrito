@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        app:srcCompat="@drawable/logo2"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        app:srcCompat="@drawable/logo_transparent"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

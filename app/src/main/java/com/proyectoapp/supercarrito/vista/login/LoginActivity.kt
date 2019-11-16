@@ -10,7 +10,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.proyectoapp.supercarrito.R
-import com.proyectoapp.supercarrito.vista.MainActivity
+import com.proyectoapp.supercarrito.vista.entrada.EntradaActivity
 
 
 class LoginActivity : AppCompatActivity() {
@@ -67,6 +67,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun action(){
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, EntradaActivity::class.java))
     }
 }
