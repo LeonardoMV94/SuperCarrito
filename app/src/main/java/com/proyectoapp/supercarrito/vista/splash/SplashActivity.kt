@@ -17,6 +17,7 @@ class SplashActivity : AppCompatActivity() {
         //quitar Titulo de app de la parte superior  --Leonardo
         supportActionBar?.hide()
 
+        //comentario johnny casanova
 
         //El logo de la app es provisorio, se puede cambiar mas adelante
 
