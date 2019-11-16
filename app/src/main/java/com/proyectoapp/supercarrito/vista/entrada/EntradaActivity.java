@@ -52,16 +52,19 @@ public class EntradaActivity extends AppCompatActivity{
 
     private void action(){
         TextView txtCodigoBarras = findViewById(R.id.txtCodigo);
+        EditText txtMarcaProd = findViewById(R.id.editMarca);
         EditText txtNombreProd = findViewById(R.id.editNombre);
         EditText txtPrec = findViewById(R.id.editPrecio);
         EditText txtCant = findViewById(R.id.editCantidad);
 
         String cod = txtCodigoBarras.getText().toString();
+        String marc = txtMarcaProd.getText().toString();
         String name = txtNombreProd.getText().toString();
         String prec = txtPrec.getText().toString();
         String cant = txtCant.getText().toString();
 
         if (!cod.equalsIgnoreCase("")
+        && !marc.equalsIgnoreCase("")
         && !name.equalsIgnoreCase("")
         && !prec.equalsIgnoreCase("")
         && !cant.equalsIgnoreCase("") ){

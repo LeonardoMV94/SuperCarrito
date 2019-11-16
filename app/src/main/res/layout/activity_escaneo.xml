@@ -15,32 +15,26 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/txtCodigo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:orientation="horizontal">
+            android:layout_gravity="left"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:text="codigo" />
+
+        <EditText
+            android:id="@+id/editMarca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:hint="Marca producto"
+            android:inputType="textPersonName" />
 
 
-            <TextView
-                android:id="@+id/txtCodigo"
-                android:layout_width="wrap_content"
-                android:layout_height="22dp"
-                android:layout_gravity="left"
-                android:ems="10"
-                android:text="codigo" />
-
-            <Button
-                android:id="@+id/btnScan"
-                android:layout_width="129dp"
-                android:layout_height="22dp"
-                android:layout_gravity="right"
-                android:layout_marginEnd="32dp"
-                android:background="@color/colorPrimary"
-                android:text="Escanear"
-                android:textColor="@android:color/white" />
-
-        </LinearLayout>
 
         <EditText
             android:id="@+id/editNombre"
@@ -48,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:ems="10"
+            android:layout_marginBottom="10dp"
             android:hint="Nombre producto"
             android:inputType="textPersonName" />
 
@@ -57,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:ems="10"
+            android:layout_marginBottom="10dp"
             android:hint="Precio"
             android:inputType="number" />
 
@@ -69,14 +65,39 @@
             android:hint="Cantidad"
             android:inputType="number" />
 
-        <Button
-            android:id="@+id/btnGuardarProducto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@color/colorPrimary"
-            android:text="Guardar"
-            android:textColor="@android:color/white" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btnGuardarProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="Guardar"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.003"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.199" />
+
+            <Button
+                android:id="@+id/btnScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="Escanear Codigo"
+                android:textColor="@android:color/white"
+                android:ems="5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.961"
+                app:layout_constraintStart_toEndOf="@+id/btnGuardarProducto"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.199" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

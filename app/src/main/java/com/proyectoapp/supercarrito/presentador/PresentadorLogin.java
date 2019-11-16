@@ -13,6 +13,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.proyectoapp.supercarrito.vista.entrada.EntradaActivity;
+import com.proyectoapp.supercarrito.vista.login.LoginActivity;
 
 import java.util.concurrent.Executor;
 
@@ -39,29 +40,31 @@ public class PresentadorLogin {
 
     public void iniciarSesion(String email,String password){
 
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener((Executor) this, new OnCompleteListener<AuthResult>() {
+                mAuth.createUserWithEmailAndPassword(email, password)
+                        .addOnCompleteListener((Executor) this, new OnCompleteListener<AuthResult>() {
 
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "createUserWithEmail:success");
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    Log.d(TAG, "createUserWithEmail:success");
 
-                            mDatabase.child("Usuarios").setValue(task.getResult().getUser().getUid());
-                            Intent intent = new Intent(mContext, EntradaActivity.class);
-                            mContext.startActivity(intent);
+                                    mDatabase.child("User").setValue(task.getResult().getUser().getUid());
+                                    Intent intent = new Intent(mContext, EntradaActivity.class);
+                                    mContext.startActivity(intent);
 
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Toast.makeText(mContext, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Toast.makeText(mContext, "Authentication failed.",
+                                            Toast.LENGTH_SHORT).show();
 
-                        }
+                                }
 
 
-                    }
-                });
+                            }
+                        });
+
+
     }
 
 

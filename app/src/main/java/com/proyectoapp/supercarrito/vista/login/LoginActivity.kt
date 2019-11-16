@@ -31,9 +31,12 @@ class LoginActivity : AppCompatActivity() {
         txtPass=findViewById(R.id.txtPass)
         progressBar= findViewById(R.id.progressBar)
 
-
         auth= FirebaseAuth.getInstance()
+
+
     }
+
+
 
     fun forgotPassword(@Suppress("UNUSED_PARAMETER")view: View){
         startActivity(Intent(this, ForgotPassActivity::class.java))
@@ -43,10 +46,13 @@ class LoginActivity : AppCompatActivity() {
         startActivity(Intent(this, RegisterActivity::class.java))
     }
 
-    fun login(@Suppress("UNUSED_PARAMETER")view: View){
+    fun login(@Suppress("UNUSED_PARAMETER")view: View) {
         loginUser()
     }
+
     private fun loginUser(){
+
+
         val user:String=txtUser.text.toString()
         val pass:String=txtPass.text.toString()
 
@@ -63,7 +69,11 @@ class LoginActivity : AppCompatActivity() {
                         progressBar.visibility=View.INVISIBLE
                     }
                 }
+        } else{
+            Toast.makeText(this,"Ingrese datos en ambos campos",Toast.LENGTH_LONG).show()
         }
+
+
     }
 
     private fun action(){
