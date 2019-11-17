@@ -10,18 +10,28 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.proyectoapp.supercarrito.R;
+import com.proyectoapp.supercarrito.presentador.IngresarDatosFIrebase;
 
 public class EntradaActivity extends AppCompatActivity{
 
     private Button btnCaptureCode;
     private Button btnGuardarDatos;
+    private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
 
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_escaneo);
+
+        mAuth=FirebaseAuth.getInstance();
+        mDatabase= FirebaseDatabase.getInstance().getReference();
+
 
         btnCaptureCode = findViewById(R.id.btnScan);
         btnCaptureCode.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +78,8 @@ public class EntradaActivity extends AppCompatActivity{
         && !name.equalsIgnoreCase("")
         && !prec.equalsIgnoreCase("")
         && !cant.equalsIgnoreCase("") ){
-            Toast.makeText(this,"Datos Ingresados !!",Toast.LENGTH_LONG).show();
+            IngresarDatosFIrebase ingresarDatosFIrebase = new IngresarDatosFIrebase(this,mDatabase,mAuth);
+            ingresarDatosFIrebase.ingresarProductos(cod, marc,name, prec, cant);
         } else{
             Toast.makeText(this,"Faltan datos por ingresar",Toast.LENGTH_LONG).show();
         }
