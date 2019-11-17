@@ -80,6 +80,12 @@ public class EntradaActivity extends AppCompatActivity{
         && !cant.equalsIgnoreCase("") ){
             IngresarDatosFIrebase ingresarDatosFIrebase = new IngresarDatosFIrebase(this,mDatabase,mAuth);
             ingresarDatosFIrebase.ingresarProductos(cod, marc,name, prec, cant);
+            txtCodigoBarras.setText("codigo");
+            txtMarcaProd.setText("");
+            txtNombreProd.setText("");
+            txtPrec.setText("");
+            txtCant.setText("");
+
         } else{
             Toast.makeText(this,"Faltan datos por ingresar",Toast.LENGTH_LONG).show();
         }

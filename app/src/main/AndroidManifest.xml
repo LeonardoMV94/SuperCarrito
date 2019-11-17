@@ -14,14 +14,14 @@
          <activity android:name=".vista.ventas.VentaActivity" />
         <activity android:name=".vista.entrada.SimpleScannerActivity"/>
         <activity android:name=".vista.entrada.EntradaActivity">
+
+        </activity>
+        <activity android:name=".vista.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".vista.splash.SplashActivity">
-
         </activity>
         <activity android:name=".vista.login.ForgotPassActivity" />
         <activity android:name=".vista.login.LoginActivity">
