@@ -1,47 +1,43 @@
 package com.proyectoapp.supercarrito.vista.ventas;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
-import com.google.zxing.Result;
+import android.widget.Button;
+import android.widget.TextView;
 import com.proyectoapp.supercarrito.R;
 
-import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
-public class SaleActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler {
-    private ZXingScannerView escannerView;
+
+public class SaleActivity extends AppCompatActivity {
+
+    private Button btnCaptureCod;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sale);
-    }
 
-    public void Escanear(View view ){
-    escannerView=new ZXingScannerView(this);
-    setContentView(escannerView);
-    escannerView.setResultHandler(this);
-    escannerView.startCamera();
-    }
+        btnCaptureCod = findViewById(R.id.btnAgregarSale);
+        btnCaptureCod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), SimpleScannerSalesActivity.class);
+                startActivity(intent);
+            }
+        });
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        escannerView.stopCamera();
-    }
 
-    @Override
-    public void handleResult(Result result) {
-        AlertDialog.Builder builder=new AlertDialog.Builder(this);
-        builder.setTitle("Resultado del scanner");
-        builder.setMessage(result.getText());
-        AlertDialog alertDialog=builder.create();
-        alertDialog.show();
-        escannerView.resumeCameraPreview(this);
+        Bundle datos = this.getIntent().getExtras();
+        if (datos != null){
+            String datosObtenidos = getIntent().getStringExtra("codigoBarras");
+            TextView txtCod =  findViewById(R.id.txtCodigoSale);
+            txtCod.setText(datosObtenidos);
+        }
 
     }
-    }
+
+}

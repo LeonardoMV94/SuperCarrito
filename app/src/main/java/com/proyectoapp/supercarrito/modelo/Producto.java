@@ -3,21 +3,21 @@ package com.proyectoapp.supercarrito.modelo;
 public class Producto {
 
     private String codigoBarras="";
-    private String marcaProducto="";
-    private String nombreProducto="";
-    private int precioProducto=0;
-    private int cantidadProducto=0;
+    private String marca="";
+    private String nombreo="";
+    private int precio=0;
+    private int cantidad=0;
 
     public Producto(){
 
     }
 
-    public Producto(String codigoBarras, String marcaProducto, String nombreProducto, int precioProducto, int cantidadProducto) {
+    public Producto(String codigoBarras, String marca, String nombreo, int precio, int cantidad) {
         this.codigoBarras = codigoBarras;
-        this.marcaProducto = marcaProducto;
-        this.nombreProducto = nombreProducto;
-        this.precioProducto = precioProducto;
-        this.cantidadProducto = cantidadProducto;
+        this.marca = marca;
+        this.nombreo = nombreo;
+        this.precio = precio;
+        this.cantidad = cantidad;
     }
 
     public String getCodigoBarras() {
@@ -28,35 +28,47 @@ public class Producto {
         this.codigoBarras = codigoBarras;
     }
 
-    public String getMarcaProducto() {
-        return marcaProducto;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setMarcaProducto(String marcaProducto) {
-        this.marcaProducto = marcaProducto;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
-    public String getNombreProducto() {
-        return nombreProducto;
+    public String getNombreo() {
+        return nombreo;
     }
 
-    public void setNombreProducto(String nombreProducto) {
-        this.nombreProducto = nombreProducto;
+    public void setNombreo(String nombreo) {
+        this.nombreo = nombreo;
     }
 
-    public int getPrecioProducto() {
-        return precioProducto;
+    public int getPrecio() {
+        return precio;
     }
 
-    public void setPrecioProducto(int precioProducto) {
-        this.precioProducto = precioProducto;
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
-    public int getCantidadProducto() {
-        return cantidadProducto;
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public void setCantidadProducto(int cantidadProducto) {
-        this.cantidadProducto = cantidadProducto;
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "codigoBarras='" + codigoBarras + '\'' +
+                ", marca='" + marca + '\'' +
+                ", nombreo='" + nombreo + '\'' +
+                ", precio=" + precio +
+                ", cantidad=" + cantidad +
+                '}';
     }
 }
+

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.proyectoapp.supercarrito">
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -11,11 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-         <activity android:name=".vista.ventas.VentaActivity" />
-        <activity android:name=".vista.entrada.SimpleScannerActivity"/>
-        <activity android:name=".vista.entrada.EntradaActivity">
-
-        </activity>
+        <activity android:name=".vista.ExampleActivity"></activity>
+        <activity android:name=".vista.resumen.ResumenActivity" />
+        <activity android:name=".vista.ventas.SimpleScannerSalesActivity" />
+        <activity android:name=".vista.ventas.SaleActivity"></activity>
+        <activity android:name=".vista.ventas.VentaActivity" />
+        <activity android:name=".vista.entrada.SimpleScannerActivity" />
+        <activity android:name=".vista.entrada.EntradaActivity" />
         <activity android:name=".vista.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +27,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".vista.login.ForgotPassActivity" />
-        <activity android:name=".vista.login.LoginActivity">
-
-        </activity>
+        <activity android:name=".vista.login.LoginActivity" />
         <activity android:name=".vista.MainActivity" />
         <activity android:name=".vista.login.RegisterActivity" />
     </application>

@@ -12,6 +12,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.proyectoapp.supercarrito.R
 import com.proyectoapp.supercarrito.presentador.PresentadorUsuario
+import com.proyectoapp.supercarrito.vista.ExampleActivity
 import com.proyectoapp.supercarrito.vista.entrada.EntradaActivity
 
 
@@ -81,6 +82,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun action() {
-        startActivity(Intent(this, EntradaActivity::class.java))
+        startActivity(Intent(this, ExampleActivity::class.java))
     }
 }

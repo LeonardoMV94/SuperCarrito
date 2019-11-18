@@ -2,6 +2,7 @@ package com.proyectoapp.supercarrito.presentador;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
@@ -39,12 +40,15 @@ public class TraerDatosFirebase {
 
                     assert producto != null;
                     String codigoBarras= producto.getCodigoBarras();
-                    String marcaProducto= producto.getMarcaProducto();
-                    String nombreProducto= producto.getNombreProducto();
-                    int precioProducto= producto.getPrecioProducto();
-                    int cantidadProducto= producto.getCantidadProducto();
+                    String marcaProducto= producto.getMarca();
+                    String nombreProducto= producto.getNombreo();
+                    int precioProducto= producto.getPrecio();
+                    int cantidadProducto= producto.getCantidad();
 
-                    Log.i(TAG,"onDataChange: " + producto);
+                    Log.i(TAG,"onDataChange: " + producto.toString());
+
+                    //llevar datos a texview
+
                 }
             }
 

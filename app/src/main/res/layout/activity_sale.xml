@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vista.ventas.SaleActivity">
+    tools:context=".vista.ventas.SaleActivity"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_agregarsale"
-        android:layout_width="102dp"
-        android:layout_height="58dp"
-        android:layout_marginEnd="160dp"
-        android:text="Agregar"
-        android:background="@color/colorPrimary"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="88dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="274dp"
-        android:layout_height="31dp"
-        android:text="Codigo de Barras"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="42dp"
-        tools:ignore="MissingConstraints" />
 
     <LinearLayout
-        android:layout_width="375dp"
-        android:layout_height="415dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="161dp"
-        tools:ignore="MissingConstraints">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txtCodigoSale"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:text="Codigo de Barras"
+            tools:ignore="MissingConstraints" />
+        <Button
+            android:id="@+id/btnAgregarSale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@color/colorPrimary"
+            android:text="Agregar"
+            android:textColor="@android:color/white"
+            tools:ignore="MissingConstraints" />
+
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
+</LinearLayout>
