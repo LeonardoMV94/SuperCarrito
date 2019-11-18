@@ -6,8 +6,18 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".vista.login.LoginActivity"
-    android:layout_marginTop="35dp">
+    android:layout_marginTop="35dp"
+    android:background="@drawable/gradient_background">
 
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="201dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:srcCompat="@drawable/logo_transparent" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -63,5 +73,11 @@
         android:onClick="register"
         android:text="Registrar"
         android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/jnico" />
 
 </LinearLayout>
