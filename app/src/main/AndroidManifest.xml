@@ -11,11 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".vista.ExampleActivity"></activity>
+        <activity
+            android:name=".vista.stock.Stock2Activity"
+            android:label="@string/title_activity_stock2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".vista.stock.StockActivity" />
+        <activity android:name=".vista.ExampleActivity" />
         <activity android:name=".vista.resumen.ResumenActivity" />
         <activity android:name=".vista.ventas.SimpleScannerSalesActivity" />
-        <activity android:name=".vista.ventas.SaleActivity"></activity>
+        <activity android:name=".vista.ventas.SaleActivity" />
         <activity android:name=".vista.ventas.VentaActivity" />
         <activity android:name=".vista.entrada.SimpleScannerActivity" />
         <activity android:name=".vista.entrada.EntradaActivity" />

@@ -82,6 +82,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun action() {
-        startActivity(Intent(this, ExampleActivity::class.java))
+        startActivity(Intent(this, EntradaActivity::class.java))
     }
 }

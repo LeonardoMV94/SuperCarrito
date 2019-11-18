@@ -47,8 +47,7 @@ public class TraerDatosFirebase {
 
                     Log.i(TAG,"onDataChange: " + producto.toString());
 
-                    //llevar datos a texview
-                    //test
+
 
                 }
             }
