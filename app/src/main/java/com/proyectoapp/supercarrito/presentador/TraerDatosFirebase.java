@@ -19,7 +19,7 @@ public class TraerDatosFirebase {
     //https://youtu.be/lI2tLNs4nUc
 
     private static final String TAG = "TraerDatosFirebase";
-    Context mContext;
+    private Context mContext;
     private FirebaseSuccessListener mSuccessListener;
 
 
@@ -48,6 +48,7 @@ public class TraerDatosFirebase {
                     Log.i(TAG,"onDataChange: " + producto.toString());
 
                     //llevar datos a texview
+                    //test
 
                 }
             }
