@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import static com.proyectoapp.supercarrito.R.drawable.ic_shopping_cart_black_24dp;
 
 public class RecyclerProductoAdapter extends RecyclerView.Adapter<RecyclerProductoAdapter.ProductoViewHolder> {
-
+//comentario Lucas
     private Context mContext;
     private int layoutResource;
     private ArrayList<Producto> arrayListProductos;
