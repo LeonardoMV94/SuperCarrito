@@ -2,44 +2,54 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="15dp">
+    android:padding="15dp"
+    >
 
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:srcCompat="@drawable/ic_shopping_cart_black_24dp" />
+        android:layout_width="82dp"
+        android:layout_height="79dp"
+        android:contentDescription="carrito"
+        app:srcCompat="@drawable/ic_shopping_cart_black_24dp"
+        tools:ignore="VectorDrawableCompat" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Marca"
+            android:text="Marca: "
+            android:textStyle="bold"
             android:id="@+id/txtMarcaRow"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="nombre"
+            android:text="Nombre: "
+            android:textStyle="bold"
             android:id="@+id/txtNombreRow"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Precio"
-            android:id="@+id/txtPrecioRow"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cantidad"
-            android:id="@+id/txtCantidadaRow"/>
 
+        <TextView
+            android:id="@+id/txtPrecioRow"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio: " />
+
+        <TextView
+            android:id="@+id/txtCantidadaRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Cantidad:   " />
 
 
     </LinearLayout>
@@ -58,18 +68,20 @@
             android:layout_height="wrap_content"
             android:text="nombre"
             android:id="@+id/txtNombreRowDatos"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Precio"
-            android:id="@+id/txtPrecioRowDatos"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cantidad"
-            android:id="@+id/txtCantidadaRowDatos"/>
 
+        <TextView
+            android:id="@+id/txtPrecioRowDatos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio" />
+
+        <TextView
+            android:id="@+id/txtCantidadaRowDatos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cantidad" />
 
 
     </LinearLayout>
+
 </LinearLayout>

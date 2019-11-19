@@ -14,6 +14,7 @@ import com.proyectoapp.supercarrito.R
 import com.proyectoapp.supercarrito.presentador.PresentadorUsuario
 import com.proyectoapp.supercarrito.vista.ExampleActivity
 import com.proyectoapp.supercarrito.vista.entrada.EntradaActivity
+import com.proyectoapp.supercarrito.vista.stock.StockActivity
 
 
 class LoginActivity : AppCompatActivity() {
@@ -82,6 +83,6 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun action() {
-        startActivity(Intent(this, EntradaActivity::class.java))
+        startActivity(Intent(this, StockActivity::class.java))
     }
 }

@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import static com.proyectoapp.supercarrito.R.drawable.ic_shopping_cart_black_24dp;
 
 public class RecyclerProductoAdapter extends RecyclerView.Adapter<RecyclerProductoAdapter.ProductoViewHolder> {
-//comentario Lucas
+
     private Context mContext;
     private int layoutResource;
     private ArrayList<Producto> arrayListProductos;
@@ -32,8 +32,8 @@ public class RecyclerProductoAdapter extends RecyclerView.Adapter<RecyclerProduc
 
     @NonNull
     @Override
-    public ProductoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(layoutResource,parent ,false);
+    public ProductoViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(layoutResource,viewGroup ,false);
 
         return new ProductoViewHolder(view);
     }
@@ -43,10 +43,12 @@ public class RecyclerProductoAdapter extends RecyclerView.Adapter<RecyclerProduc
         Producto producto= arrayListProductos.get(position);
         holder.mMarcaProducto.setText(producto.getMarca());
         holder.mNombreProducto.setText(producto.getNombreo());
-        holder.mPrecio.setText(producto.getPrecio());
-        holder.mCantidad.setText(producto.getCantidad());
+        //añadiendo el simbolo peso al precio del producto
+        String pre = "$ " +  String.valueOf(producto.getPrecio());
+        holder.mPrecio.setText(pre);
+        holder.mCantidad.setText(String.valueOf(producto.getCantidad()));
 
-        holder.mImagenProducto.setImageResource(ic_shopping_cart_black_24dp);
+//        holder.mImagenProducto.setImageResource(ic_shopping_cart_black_24dp);
 
     }
 

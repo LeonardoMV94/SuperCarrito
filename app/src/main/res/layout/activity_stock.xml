@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".vista.stock.StockActivity">
 
 
@@ -14,7 +15,7 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recyclerViewStock"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -22,13 +23,17 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabStock"
-            android:layout_width="71dp"
+            android:layout_width="56dp"
             android:layout_height="76dp"
             android:layout_gravity="end|bottom"
             android:clickable="true"
             android:focusable="true"
-            app:srcCompat="@drawable/ic_cloud_download_black_24dp"
-            tools:ignore="VectorDrawableCompat" />
+            app:srcCompat="@drawable/ic_refresh_black_24dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            tools:ignore="VectorDrawableCompat"
+            />
 
     </FrameLayout>
 
