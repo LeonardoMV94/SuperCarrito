@@ -5,5 +5,5 @@
     <item android:title="Añadir" android:id="@+id/action_add_producto" android:icon="@drawable/ic_add_box_black_24dp"/>
     <item android:title="Stock" android:id="@+id/action_stock_productos" android:icon="@drawable/ic_shopping_cart_black_24dp"/>
     <item android:title="Resumen" android:id="@+id/action_resume_productos" android:icon="@drawable/ic_local_atm_black_24dp"/>
-
+    <item android:title="Venta" android:id="@+id/action_sale_productos" android:icon="@drawable/ic_attach_money_black_24dp"/>
 </menu>

@@ -12,6 +12,7 @@ import com.proyectoapp.supercarrito.R;
 import com.proyectoapp.supercarrito.vista.Main2Activity;
 import com.proyectoapp.supercarrito.vista.entrada.EntradaActivity;
 import com.proyectoapp.supercarrito.vista.stock.StockActivity;
+import com.proyectoapp.supercarrito.vista.ventas.SaleActivity;
 
 public class ResumenActivity extends AppCompatActivity {
 
@@ -38,6 +39,11 @@ public class ResumenActivity extends AppCompatActivity {
                         Intent intent3 = new Intent(ResumenActivity.this, ResumenActivity.class);
                         startActivity(intent3);
                         break;
+                    case R.id.action_sale_productos:
+                        Intent intent4 = new Intent(ResumenActivity.this, SaleActivity.class);
+                        startActivity(intent4);
+                        break;
+
                 }
 
                 return false;

@@ -18,8 +18,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.proyectoapp.supercarrito.R;
 import com.proyectoapp.supercarrito.presentador.IngresarDatosFIrebase;
+import com.proyectoapp.supercarrito.vista.Main2Activity;
 import com.proyectoapp.supercarrito.vista.resumen.ResumenActivity;
 import com.proyectoapp.supercarrito.vista.stock.StockActivity;
+import com.proyectoapp.supercarrito.vista.ventas.SaleActivity;
 
 public class EntradaActivity extends AppCompatActivity {
 
@@ -79,6 +81,11 @@ public class EntradaActivity extends AppCompatActivity {
                         Intent intent3 = new Intent(EntradaActivity.this, ResumenActivity.class);
                         startActivity(intent3);
                         break;
+                    case R.id.action_sale_productos:
+                        Intent intent4 = new Intent(EntradaActivity.this, SaleActivity.class);
+                        startActivity(intent4);
+                        break;
+
                 }
 
                 return false;

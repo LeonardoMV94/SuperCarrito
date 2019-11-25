@@ -22,6 +22,7 @@ import com.proyectoapp.supercarrito.presentador.TraerDatosFirebase;
 import com.proyectoapp.supercarrito.vista.Main2Activity;
 import com.proyectoapp.supercarrito.vista.entrada.EntradaActivity;
 import com.proyectoapp.supercarrito.vista.resumen.ResumenActivity;
+import com.proyectoapp.supercarrito.vista.ventas.SaleActivity;
 
 public class StockActivity extends AppCompatActivity implements View.OnClickListener  {
     private DatabaseReference databaseReference;
@@ -59,6 +60,11 @@ public class StockActivity extends AppCompatActivity implements View.OnClickList
                     case R.id.action_resume_productos:
                         Intent intent3 = new Intent(StockActivity.this, ResumenActivity.class);
                         startActivity(intent3);
+                        break;
+
+                    case R.id.action_sale_productos:
+                        Intent intent4 = new Intent(StockActivity.this, SaleActivity.class);
+                        startActivity(intent4);
                         break;
                 }
 
