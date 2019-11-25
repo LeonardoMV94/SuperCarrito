@@ -11,13 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".vista.stock.Stock2Activity"
-            android:label="@string/title_activity_stock2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".vista.stock.StockActivity" >
-
-        </activity>
+        <activity android:name=".vista.Main2Activity"></activity>
+        <activity android:name=".vista.stock.StockActivity"></activity>
         <activity android:name=".vista.ExampleActivity" />
         <activity android:name=".vista.resumen.ResumenActivity" />
         <activity android:name=".vista.ventas.SimpleScannerSalesActivity" />

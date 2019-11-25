@@ -1,22 +1,27 @@
 package com.proyectoapp.supercarrito.vista.entrada;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.proyectoapp.supercarrito.R;
 import com.proyectoapp.supercarrito.presentador.IngresarDatosFIrebase;
+import com.proyectoapp.supercarrito.vista.resumen.ResumenActivity;
+import com.proyectoapp.supercarrito.vista.stock.StockActivity;
 
-public class EntradaActivity extends AppCompatActivity{
+public class EntradaActivity extends AppCompatActivity {
 
     private Button btnCaptureCode;
     private Button btnGuardarDatos;
@@ -56,6 +61,29 @@ public class EntradaActivity extends AppCompatActivity{
             TextView txtCod =  findViewById(R.id.txtCodigo);
             txtCod.setText(datosObtenidos);
         }
+
+        BottomNavigationView bottomNavigationMenu = findViewById(R.id.bottom_navigation_view);
+        bottomNavigationMenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.action_add_producto:
+                        Intent intent = new Intent(EntradaActivity.this, EntradaActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.action_stock_productos:
+                        Intent intent2 = new Intent(EntradaActivity.this, StockActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.action_resume_productos:
+                        Intent intent3 = new Intent(EntradaActivity.this, ResumenActivity.class);
+                        startActivity(intent3);
+                        break;
+                }
+
+                return false;
+            }
+        });
 
     }
 
